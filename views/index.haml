@@ -1,45 +1,55 @@
 %article
 
-	%section{:id => 'what'}
-		%h2 What is it?
-		%p Example datasets for use in API examples, etc.
-		%h2 How do I use it?
-		%p
-			%abbr{:title => 'REpresentational State Transfer'} REST
-			interface
-		%pre http://api-example.com/[dataset][.format]
-		%p e.g. http://api-example.com/employees.xml
-		%p e.g. http://api-example.com/employees/3.xml
-
-	%section{:id => 'formats'}
-		%h2 Available formats
+	%section{:id => 'datasets'}
+		%h2 Datasets
 		%ul
 			%li
-				%abbr{:title => 'HyperText Markup Language'} HTML
-			%li
-				%abbr{:title => 'eXtensible Markup Language'} XML
-			%li
-				%abbr{:title => 'JavaScript'} JS
-				(with optional callback)
-			%li
-				%abbr{:title => 'JavaScript Object Notation'} JSON
-			%li
-				%abbr{:title => 'Comma Separated Values'} CSV
-			%li
-				%abbr{:title => 'Tab Separated Values'} TSV
+				%a{:href => '/employees', :rel => 'nofollow'} Employees
+				%ul
+					%li
+						%a{:href => '/employees.js', :rel => 'nofollow'} JS
+					%li
+						%a{:href => '/employees.json', :rel => 'nofollow'} JSON
+					%li
+						%a{:href => '/employees.xml', :rel => 'nofollow'} XML
+					%li
+						%a{:href => '/employees.html', :rel => 'nofollow'} HTML
+					%li
+						%a{:href => '/employees.csv', :rel => 'nofollow'} CSV
+					%li
+						%a{:href => '/employees.tsv', :rel => 'nofollow'} TSV
+
 
 	%aside
 
-		%section{:id => 'datasets'}
-			%h2 Datasets
+		%section{:id => 'what'}
+			%h2 What is it?
+			%p Example datasets for use in API examples, etc.
+			%h2 How do I use it?
+			%p
+				%abbr{:title => 'REpresentational State Transfer'} REST
+				interface
+			%pre http://api-example.com/[dataset][.format]
+			%p
+				e.g.
+				%pre
+					%a{:href => 'http://api-example.com/employees.xml'} http://api-example.com/employees.xml
+				%pre
+					%a{:href => 'http://api-example.com/employees/1.xml'} http://api-example.com/employees/1.xml
+
+		%section{:id => 'formats'}
+			%h2 Available formats
 			%ul
-				%li 
-					%a{:href => '/employees', :rel => 'nofollow'} Employees
-					(
-					%a{:href => '/employees.js', :rel => 'nofollow'} JS
-					%a{:href => '/employees.json', :rel => 'nofollow'} JSON
-					%a{:href => '/employees.xml', :rel => 'nofollow'} XML
-					%a{:href => '/employees.html', :rel => 'nofollow'} HTML
-					%a{:href => '/employees.csv', :rel => 'nofollow'} CSV
-					%a{:href => '/employees.tsv', :rel => 'nofollow'} TSV
-					)
+				%li
+					%abbr{:title => 'HyperText Markup Language'} HTML
+				%li
+					%abbr{:title => 'eXtensible Markup Language'} XML
+				%li
+					%abbr{:title => 'JavaScript'} JS
+					(with optional callback)
+				%li
+					%abbr{:title => 'JavaScript Object Notation'} JSON
+				%li
+					%abbr{:title => 'Comma Separated Values'} CSV
+				%li
+					%abbr{:title => 'Tab Separated Values'} TSV

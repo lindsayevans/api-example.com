@@ -9,7 +9,8 @@
 		%header{:role => 'banner'}
 			%h1 
 				%a{:href => "/"} api-example
-		= yield
+		%div{:id => 'main'}
+			= yield
 		%footer{:role => 'contentinfo'}
 			:markdown
 				Made by [Linz](http://linz.id.au/). 

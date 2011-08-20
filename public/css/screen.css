@@ -1,5 +1,5 @@
 body {
-	margin: 2em 10em;
+	margin: 2em;
 	font: 62.5%/1.3 'Helvetica Neue','Arial',sans-serif;
 	background: #fff;
 	color: #333;
@@ -9,18 +9,11 @@ header, article, section, aside, footer {
 	display: block;
 }
 
-header {
-	font-size: 2.8em;
+::selection {
+	background: rgba(255, 171, 171, 0.333);
 }
-
-#main {
-	font-size: 1.4em;
-	padding: 0.1em 1em;
-}
-
-footer {
-	font-size: 1.2em;
-	padding: 0.08333em 1.16667em;
+::-moz-selection {
+	background: rgba(255, 171, 171, 0.333);
 }
 
 a:link {
@@ -35,10 +28,33 @@ a:hover, a:active {
 	color: #FF5757;
 }
 
-header h1 a:link, header h1 a:visited {
-	padding: 0.1em 0.5em;
-	text-decoration: none;
+header {
+	width: 23.78571em;
+	margin: 0 auto;
+	font-size: 2.8em;
+}
+
+header h1 {
+	margin: 0;
+	font-size: 2em;
 	font-weight: normal;
+}
+
+header h1 a:link, header h1 a:visited {
+  -webkit-transition-property: background-color, color;
+  -webkit-transition-duration: 0.666s;
+  -moz-transition-property: background-color, color;
+  -moz-transition-duration: 0.666s;
+  -ms-transition-property: background-color, color;
+  -ms-transition-duration: 0.666s;
+  -o-transition-property: background-color, color;
+  -o-transition-duration: 0.666s;
+  transition-property: background-color, color;
+  transition-duration: 0.666s;
+
+	display: block;
+	padding: 0 0.17857em;
+	text-decoration: none;
 	background: #FFFFAB;
 	color: #666;
 }
@@ -46,4 +62,79 @@ header h1 a:link, header h1 a:visited {
 header h1 a:hover, header h1 a:active {
 	background: #FFABAB;
 	color: #333;
+}
+
+#main {
+	width: 46.14286em;
+	margin: 0 auto;
+	padding: 1.42857em 0.71429em;
+	font-size: 1.4em;
+	overflow: auto;
+}
+
+#main > article {
+	float: left;
+	clear: none;
+	width: 300px;
+	margin-right: 10px;
+}
+
+
+#main > aside {
+	float: left;
+	clear: none;
+	width: 336px;
+}
+
+#main h2 {
+	font-size: 1.14286em;
+	margin: 0 0 0.625em;
+}
+
+#main p, #main ul, #main ol, #main pre {
+	margin: 0 0 0.71429em;
+}
+
+
+footer {
+	width: 53.83333em;
+	margin: 0 auto;
+	padding: 0.83333em;
+	border-top: 1px dotted #666;
+	font-size: 1.2em;
+}
+
+footer p {
+	margin: 0;
+}
+
+
+#datasets ul {
+	padding-left: 0;
+	margin-left: 1.3em;
+}
+
+#datasets > ul li {
+	margin-bottom: 0.3em;
+}
+
+#datasets li ul {
+	list-style-type: none;
+	display: inline-block;
+}
+#datasets li ul:before {
+	content: "(";
+}
+#datasets li ul:after {
+	content: ")";
+}
+
+#datasets li li {
+	display: inline-block;
+}
+#datasets li li:after {
+	content: ", ";
+}
+#datasets li li:last-child:after {
+	content: "";
 }
